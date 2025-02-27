@@ -1,3 +1,5 @@
-<ul>
-  <li *ngFor="let user of userList">{{ user }}</li>
+<ul class="listButton">
+  <li *ngFor="let user of userList" class="item">
+    <button [routerLink]="'/user/' + user" class="btn btn-primary">{{ user }}</button>
+  </li>
 </ul>
