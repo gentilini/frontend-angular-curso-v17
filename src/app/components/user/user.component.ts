@@ -13,8 +13,12 @@ export class UserComponent implements OnInit{
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      this.userName = params.get('userName');
-    })
+    this.getUserName();
+  }
+
+  getUserName() {
+    this.route.queryParams.subscribe((params) => {
+      this.userName = params['userName'];
+    });
   }
 }

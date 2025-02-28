@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-users',
@@ -7,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
 
-  userList: string[] = [
-    "Rafael",
-    "Franciele"
+  userList: User[] = [
+    {
+      nome: 'Rafael',
+      idade:41
+    },
+    {
+      nome: 'Franciele',
+      idade: 30
+    }
   ]
 }
