@@ -1,5 +1,6 @@
 <div class="row">
   <app-user-card
+  (userInfoEmitter)="receberDados($event)"
     *ngFor="let user of userList"
     class="col-md"
     [user]="user"

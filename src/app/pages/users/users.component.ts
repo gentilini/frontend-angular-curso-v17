@@ -18,4 +18,8 @@ export class UsersComponent {
       idade: 30
     }
   ]
+
+  receberDados(user: User) {
+    console.log(user);
+  }
 }

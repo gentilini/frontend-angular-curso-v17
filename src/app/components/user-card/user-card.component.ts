@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../../models/user';
 
 @Component({
@@ -11,4 +11,10 @@ export class UserCardComponent {
     nome: '',
     idade: 0
   };
+
+  @Output() userInfoEmitter = new EventEmitter<User>();
+
+  retornarDados() {
+    this.userInfoEmitter.emit(this.user);
+  }
 }
