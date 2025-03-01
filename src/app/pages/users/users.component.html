@@ -19,7 +19,7 @@
         deve ser entre 12 a 110 anos!</div>
     </div>
   </div>
-  <button (click)="submitForm()" class="btn btn-success mt-3">Incluir</button>
+  <button [disabled]="!userForm.valid" (click)="submitForm()" class="btn btn-success mt-3">Incluir</button>
 </form>
 
 <div class="row">
