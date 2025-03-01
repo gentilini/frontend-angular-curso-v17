@@ -8,10 +8,12 @@ import { User } from '../../models/user';
 })
 export class UsersComponent {
 
+  userSelecionado: User | undefined
+
   userList: User[] = [
     {
       nome: 'Rafael',
-      idade:41
+      idade: 41
     },
     {
       nome: 'Franciele',
@@ -20,6 +22,6 @@ export class UsersComponent {
   ]
 
   receberDados(user: User) {
-    console.log(user);
+    this.userSelecionado = user;
   }
 }
